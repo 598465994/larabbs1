@@ -34,7 +34,7 @@ class UsersController extends Controller
         //如果上传了头像
         if ($request->avatar) {
             //获得图片的路径
-            $result = $uploader->save($request->avatar, 'avatar', $user->id);
+            $result = $uploader->save($request->avatar, 'avatar', $user->id, 416);
             //如果返回图片路径正确
             if ($result) {
                 $data['avatar'] = $result['path'];
