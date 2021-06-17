@@ -45,3 +45,5 @@ Route::resource('users', 'UsersController', ['only' => ['show', 'update', 'edit'
 // Route::get('/users/{users}/edit', 'usersController@edit')->name('users.edit'); //显示编辑个人资料页面
 // Route::patch('/users/{user}', 'usersController@update')->name('users.update'); //处理 edit 页面提交的更改
 
+
+Route::resource('topics', 'TopicsController', ['only' => ['index', 'show', 'create', 'store', 'update', 'edit', 'destroy']]);
